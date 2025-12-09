@@ -18,7 +18,7 @@ pipeline {
 
         stage("Deploy to EC2") {
             steps {
-                sshagent(credentials: ['jarvis-server']) {
+                sshagent(credentials: ['ec2-key']) {
                     sh """
                     ssh -o StrictHostKeyChecking=no $TARGET 'sudo rm -rf /var/www/html/*'
                     ssh -o StrictHostKeyChecking=no $TARGET 'sudo git clone https://github.com/chopadevivek07/Static-Website-on-EC2-Using-Terraform-and-Automate-Updates-Through-Jenkins.git /var/www/html'
