@@ -125,6 +125,8 @@ pipeline {
     }
 }
 ```
+![](/img/Screenshot%20(967).png)
+![](/img/Screenshot%20(968).png)
 
 **OUTPUT**
 ![](/img/3.png)
